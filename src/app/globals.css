@@ -1,26 +1,28 @@
 @import "tailwindcss";
 
+@font-face{
+  font-family: Roboto;
+  src: url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FFFCF7;
+  --text: #212429;
+  --text-secondary: #585858;
+  --gradient: linear-gradient(135deg, #FFC757, #EB5E55);
+  --text-orange: #EB5E55;
+  --text-yellow: #FFC758;
+  --text-white: #FFFCF7
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+*{
+  font-family: Roboto;
+  background-color: #FFFCF7;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
+
+

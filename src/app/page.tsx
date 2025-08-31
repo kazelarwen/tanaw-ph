@@ -2,102 +2,114 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="w-full flex flex-col items-center justify-center text-center px-6 py-16">
+      {/* Top: Powered by */}
+      <div className="flex items-center gap-2 text-[20px] text-gray-500">
+        <span>Powered by</span>
+        <Image src="/icons/tawi.svg" alt="Tawi" width={70} height={20} />
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Main Headline */}
+      <h1 className="mt-6 text-[40px] font-bold text-[var(--foreground)] leading-tight max-w-3xl">
+        Don’t scroll blind. <br /> Take back your power.
+      </h1>
+
+      {/* Subtext */}
+      <p className="mt-4 text-[14px] text-gray-400 max-w-md">
+        Your all-in-one tool for government and MIL information
+      </p>
+    
+     {/* Stats Section */}
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl">
+        {/* Box 1 */}
+        <div className="flex flex-col items-center justify-center p-6 rounded-xl shadow-sm bg-[var(--background)]">
+          <Image src="/icons/Volunteer.svg" alt="Volunteers" width={150} height={200} />
+          <p className="mt-4 font-semibold text-[20px] bg-gradient-to-r from-[#FFC757] to-[#EB5E55] bg-clip-text text-transparent">
+            4 Volunteers in Action
+          </p>
+
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        {/* Box 2 */}
+        <div className="flex flex-col items-center justify-center p-6 rounded-xl shadow-sm bg-[var(--background)]">
+          <Image src="/icons/UniqueUser.svg" alt="Unique Users" width={190} height={200} />
+          <p className="mt-4 font-semibold text-[20px] bg-gradient-to-r from-[#FFC757] to-[#EB5E55] bg-clip-text text-transparent">
+            1M+ Unique User Reached
+          </p>
+        </div>
+
+        {/* Box 3 */}
+        <div className="flex flex-col items-center justify-center p-6 rounded-xl shadow-sm bg-[var(--background)]">
+          <Image src="/icons/SessionTime.svg" alt="Session Time" width={190} height={200} />
+          <p className="mt-4 font-semibold text-[20px] bg-gradient-to-r from-[#FFC757] to-[#EB5E55] bg-clip-text text-transparent">
+            5Min Avg. Session time
+          </p>
+        </div>
+      </div>
+
+      {/* How We Keep It 100% Verified Section */}
+<div className="mt-20 w-full max-w-5xl text-left">
+  <h2 className="text-[32px] font-bold text-[var(--foreground)] text-center mb-12">
+    How We Keep It <br /> 100% Verified
+  </h2>
+
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {/* Box 1 */}
+    <div className="flex items-start gap-4 p-6 rounded-2xl bg-gradient-to-r from-[#FFC757] to-[#EB5E55] text-[var(--text-white)]">
+      <Image src="/icons/Research.svg" alt="Research" width={60} height={60} />
+      <div>
+        <h3 className="font-semibold text-lg drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">Research</h3>
+        <p className="text-sm mt-1 drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">
+          Our team gathers information only from credible sources like government sites, news, and public records.
+        </p>
+      </div>
     </div>
+
+    {/* Box 2 */}
+    <div className="flex items-start gap-4 p-6 rounded-2xl bg-gradient-to-r from-[#FFC757] to-[#EB5E55] text-[var(--text-white)]">
+      <Image src="/icons/Verification.svg" alt="Verification" width={60} height={60} />
+      <div>
+        <h3 className="font-semibold text-lg drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">Verification</h3>
+        <p className="text-sm mt-1 drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">
+          Every fact is double-checked by our head researchers to confirm accuracy.
+        </p>
+      </div>
+    </div>
+
+    {/* Box 3 */}
+    <div className="flex items-start gap-4 p-6 rounded-2xl bg-gradient-to-r from-[#FFC757] to-[#EB5E55] text-[var(--text-white)]">
+      <Image src="/icons/Simplified.svg" alt="Simplified" width={60} height={60} />
+      <div>
+        <h3 className="font-semibold text-lg drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">Simplified for You</h3>
+        <p className="text-sm mt-1 drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">
+          We rewrite complex data into clear, easy-to-read summaries without losing accuracy.
+        </p>
+      </div>
+    </div>
+
+    {/* Box 4 */}
+    <div className="flex items-start gap-4 p-6 rounded-2xl bg-gradient-to-r from-[#FFC757] to-[#EB5E55] text-[var(--text-white)]">
+      <Image src="/icons/Citation.svg" alt="Citation" width={60} height={60} />
+      <div>
+        <h3 className="font-semibold text-lg drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">Citation</h3>
+        <p className="text-sm mt-1 drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">
+          Each piece of information comes with a source link so you can check it yourself.
+        </p>
+      </div>
+    </div>
+
+    {/* Box 5 */}
+    <div className="flex items-start gap-4 p-6 rounded-2xl bg-gradient-to-r from-[#FFC757] to-[#EB5E55] text-[var(--text-white)]">
+      <Image src="/icons/Updates.svg" alt="Regular Updates" width={60} height={60} />
+      <div>
+        <h3 className="font-semibold text-lg drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">Regular Updates</h3>
+        <p className="text-sm mt-1 drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">
+          We keep track of changes and update the platform so you’re always looking at the latest information.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+    </main>
   );
 }
