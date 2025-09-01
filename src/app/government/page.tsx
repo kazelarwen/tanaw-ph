@@ -96,7 +96,7 @@ const OfficialsPage: React.FC = () => {
       category: "Malinfo",
       description:
         "MANILA, Philippines — In response to recent cyber attacks targeting government agencies, the Department of Information and Communications Technology has implemented new security protocols ...more",
-      photo: "/images/westphsea.jpg",
+      photo: "/images/security.jpg",
     },
     {
       id: 3,
@@ -105,7 +105,7 @@ const OfficialsPage: React.FC = () => {
       category: "Disinfo",
       description:
         "FARMERS in Luzon are reporting changes in crop patterns due to extreme weather events. Experts warn that misinformation about climate solutions is spreading online ...more",
-      photo: "/images/westphsea.jpg",
+      photo: "/images/climate.jpg",
     }
   ];
 

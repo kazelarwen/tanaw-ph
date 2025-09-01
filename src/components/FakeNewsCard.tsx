@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { ChevronRight } from 'lucide-react';
 
 interface NewsItem {
   id: number;
@@ -89,7 +90,10 @@ const NewsPreview: React.FC<NewsPreviewProps> = ({
     <div className="w-full max-w-6xl mx-auto p-4">
       {/* Header */}
       <div className="mb-6">
-        <h2 className="text-xl font-semibold text-[var(--text)]">{heading}</h2>
+        <div className="flex items-center">
+          <h2 className="text-xl font-semibold text-[var(--text)]">{heading}</h2>
+          <ChevronRight className="w-5 h-5 text-[var(--text-orange)] ml-2" />
+        </div>
       </div>
 
       {/* Grid */}
