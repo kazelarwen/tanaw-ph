@@ -139,70 +139,96 @@ export default function Home() {
       </div>
 
       {/* What We Offer */}
-<div className="mt-20 w-full max-w-5xl">
-  {/* Heading */}
-  <h2 className="text-[32px] font-bold text-[var(--foreground)] text-center mb-12">
-    What we offer
-  </h2>
+      <div className="mt-20 w-full max-w-5xl">
+        {/* Heading */}
+        <h2 className="text-[32px] font-bold text-[var(--foreground)] text-center mb-12">
+          What we offer
+        </h2>
 
-  <div className="flex flex-col gap-10">
-    {[
-      {
-        title: "Officials & Candidates",
-        desc: "Search verified profiles of leaders, parties, and candidates with their background, experience, and advocacies.",
-        src: "/icons/Offer1.svg",
-        width: 100,
-        height: 100,
-      },
-      {
-        title: "MIL Resources",
-        desc: "Access infographics, classroom-ready games, and real cases of digital dangers to learn smarter media habits.",
-        src: "/icons/Offer2.svg",
-        width: 100,
-        height: 100,
-      },
-      {
-        title: "Fact Check Tools",
-        desc: "Search verified profiles of leaders, parties, and candidates with their background, experience, and advocacies.",
-        src: "/icons/Offer3.svg",
-        width: 100,
-        height: 100,
-      },
-      {
-        title: "Youth Empowerment",
-        desc: "Access infographics, classroom-ready games, and real cases of digital dangers to learn smarter media habits.",
-        src: "/icons/Offer4.svg",
-        width: 100,
-        height: 100,
-      },
-      {
-        title: "Tawi Assistant",
-        desc: "Search verified profiles of leaders, parties, and candidates with their background, experience, and advocacies.",
-        src: "/icons/Offer5.svg",
-        width: 150,
-        height: 100,
-      },
-    ].map((item, index) => (
-      <div
-        key={index}
-        className={`flex items-start gap-4 ${
-          index % 2 === 0 ? "flex-row-reverse" : "flex-row"
-        }`}
-      >
-        <Image
-          src={item.src}
-          alt={item.title}
-          width={item.width}
-          height={item.height}
-        />
-        <div className={`text-left ${index % 2 === 0 ? "text-right" : "text-left"}`}>
-          <h3 className="font-semibold text-lg gradient-text">{item.title}</h3>
-          <p className="text-sm text-gray-600 mt-1">{item.desc}</p>
+        <div className="flex flex-col gap-10">
+          {[
+            {
+              title: "Officials & Candidates",
+              desc: "Search verified profiles of leaders, parties, and candidates with their background, experience, and advocacies.",
+              src: "/icons/Offer1.svg",
+              width: 100,
+              height: 100,
+            },
+            {
+              title: "MIL Resources",
+              desc: "Access infographics, classroom-ready games, and real cases of digital dangers to learn smarter media habits.",
+              src: "/icons/Offer2.svg",
+              width: 100,
+              height: 100,
+            },
+            {
+              title: "Fact Check Tools",
+              desc: "Search verified profiles of leaders, parties, and candidates with their background, experience, and advocacies.",
+              src: "/icons/Offer3.svg",
+              width: 100,
+              height: 100,
+            },
+            {
+              title: "Youth Empowerment",
+              desc: "Access infographics, classroom-ready games, and real cases of digital dangers to learn smarter media habits.",
+              src: "/icons/Offer4.svg",
+              width: 100,
+              height: 100,
+            },
+            {
+              title: "Tawi Assistant",
+              desc: "Search verified profiles of leaders, parties, and candidates with their background, experience, and advocacies.",
+              src: "/icons/Offer5.svg",
+              width: 150,
+              height: 100,
+            },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className={`flex items-start gap-4 ${
+                index % 2 === 0 ? "flex-row-reverse" : "flex-row"
+              }`}
+            >
+              <Image
+                src={item.src}
+                alt={item.title}
+                width={item.width}
+                height={item.height}
+              />
+              <div className={`text-left ${index % 2 === 0 ? "text-right" : "text-left"}`}>
+                <h3 className="font-semibold text-lg gradient-text">{item.title}</h3>
+                <p className="text-sm text-gray-600 mt-1">{item.desc}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    ))}
-  </div>
-</div>
+
+      {/* Volunteer Section */}
+      <div className="mt-32 w-full max-w-5xl mx-auto px-4 text-center">
+        {/* Heading */}
+        <h2 className="text-[32px] font-bold mb-4">
+          <span className="text-[#212429]">Be a </span>
+          <span className="text-transparent bg-clip-text gradient-text">TanawPH</span>
+          <span className="text-[#212429]"> Volunteer</span>
+        </h2>
+
+        {/* Subtext */}
+        <p className="text-gray-600 text-lg mb-6">
+          Join us in the fight against misinformation and digital dangers. As a volunteer, you’ll help create resources, share verified information, and empower fellow youth to think critically.
+        </p>
+
+        {/* CTA */}
+        <p className="text-[20px] font-semibold text-transparent bg-clip-text gradient-text mb-6">
+          Stand with us—be part of the change today!
+        </p>
+
+        {/* Button */}
+        <button className="bg-white text-transparent bg-clip-text gradient-text rounded-full shadow-lg px-8 py-3 font-semibold hover:scale-105 transition-transform">
+          Become a Volunteer
+        </button>
+      </div>
+
 
 
     </main>
