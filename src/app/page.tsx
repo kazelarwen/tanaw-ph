@@ -47,69 +47,164 @@ export default function Home() {
         </div>
       </div>
 
-      {/* How We Keep It 100% Verified Section */}
-<div className="mt-20 w-full max-w-5xl text-left">
+        {/* How We Keep It 100% Verified Section */}
+        <div className="mt-20 w-full max-w-5xl text-left">
+          <h2 className="text-[32px] font-bold text-[var(--foreground)] text-center mb-12">
+            How We Keep It <br /> 100% Verified
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Box 1 */}
+            <div className="gradient-box flex items-start gap-4">
+              <Image src="/icons/Research.svg" alt="Research" width={60} height={60} />
+              <div>
+                <h3 className="font-semibold text-lg drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">
+                  Research
+                </h3>
+                <p className="text-sm mt-1 drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">
+                  Our team gathers information only from credible sources like government sites, news, and public records.
+                </p>
+              </div>
+            </div>
+
+            {/* Box 2 */}
+            <div className="gradient-box flex items-start gap-4">
+              <Image src="/icons/Verification.svg" alt="Verification" width={60} height={60} />
+              <div>
+                <h3 className="font-semibold text-lg drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">
+                  Verification
+                </h3>
+                <p className="text-sm mt-1 drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">
+                  Every fact is double-checked by our head researchers to confirm accuracy.
+                </p>
+              </div>
+            </div>
+
+            {/* Box 3 */}
+            <div className="gradient-box flex items-start gap-4">
+              <Image src="/icons/Simplified.svg" alt="Simplified" width={60} height={60} />
+              <div>
+                <h3 className="font-semibold text-lg drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">
+                  Simplified for You
+                </h3>
+                <p className="text-sm mt-1 drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">
+                  We rewrite complex data into clear, easy-to-read summaries without losing accuracy.
+                </p>
+              </div>
+            </div>
+
+            {/* Box 4 */}
+            <div className="gradient-box flex items-start gap-4">
+              <Image src="/icons/Citation.svg" alt="Citation" width={60} height={60} />
+              <div>
+                <h3 className="font-semibold text-lg drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">
+                  Citation
+                </h3>
+                <p className="text-sm mt-1 drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">
+                  Each piece of information comes with a source link so you can check it yourself.
+                </p>
+              </div>
+            </div>
+
+            {/* Box 5 */}
+            <div className="gradient-box flex items-start gap-4">
+              <Image src="/icons/Updates.svg" alt="Regular Updates" width={60} height={60} />
+              <div>
+                <h3 className="font-semibold text-lg drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">
+                  Regular Updates
+                </h3>
+                <p className="text-sm mt-1 drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">
+                  We keep track of changes and update the platform so you’re always looking at the latest information.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      {/* About */}
+      <div className="mt-20 w-full max-w-3xl text-center">
+        {/* Heading */}
+        <h2 className="mt-6 text-[40px] font-bold leading-tight">
+          <span className="text-[var(--foreground)]">About </span>
+          <span className="gradient-text">TanawPH</span>
+        </h2>
+
+        {/* Paragraph */}
+        <p className="mt-6 text-[16px] text-gray-500">
+          <span className="gradient-text font-semibold">TanawPH</span> is a youth-led platform that helps Filipinos stay
+          informed and safe online. We provide verified civic information, tools, and
+          resources that strengthen Media and Information Literacy (MIL) to fight
+          misinformation and digital dangers.
+        </p>
+      </div>
+
+      {/* What We Offer */}
+<div className="mt-20 w-full max-w-5xl">
+  {/* Heading */}
   <h2 className="text-[32px] font-bold text-[var(--foreground)] text-center mb-12">
-    How We Keep It <br /> 100% Verified
+    What we offer
   </h2>
 
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    {/* Box 1 */}
-    <div className="flex items-start gap-4 p-6 rounded-2xl bg-gradient-to-r from-[#FFC757] to-[#EB5E55] text-[var(--text-white)]">
-      <Image src="/icons/Research.svg" alt="Research" width={60} height={60} />
-      <div>
-        <h3 className="font-semibold text-lg drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">Research</h3>
-        <p className="text-sm mt-1 drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">
-          Our team gathers information only from credible sources like government sites, news, and public records.
-        </p>
+  <div className="flex flex-col gap-10">
+    {[
+      {
+        title: "Officials & Candidates",
+        desc: "Search verified profiles of leaders, parties, and candidates with their background, experience, and advocacies.",
+        src: "/icons/Offer1.svg",
+        width: 100,
+        height: 100,
+      },
+      {
+        title: "MIL Resources",
+        desc: "Access infographics, classroom-ready games, and real cases of digital dangers to learn smarter media habits.",
+        src: "/icons/Offer2.svg",
+        width: 100,
+        height: 100,
+      },
+      {
+        title: "Fact Check Tools",
+        desc: "Search verified profiles of leaders, parties, and candidates with their background, experience, and advocacies.",
+        src: "/icons/Offer3.svg",
+        width: 100,
+        height: 100,
+      },
+      {
+        title: "Youth Empowerment",
+        desc: "Access infographics, classroom-ready games, and real cases of digital dangers to learn smarter media habits.",
+        src: "/icons/Offer4.svg",
+        width: 100,
+        height: 100,
+      },
+      {
+        title: "Tawi Assistant",
+        desc: "Search verified profiles of leaders, parties, and candidates with their background, experience, and advocacies.",
+        src: "/icons/Offer5.svg",
+        width: 150,
+        height: 100,
+      },
+    ].map((item, index) => (
+      <div
+        key={index}
+        className={`flex items-start gap-4 ${
+          index % 2 === 0 ? "flex-row-reverse" : "flex-row"
+        }`}
+      >
+        <Image
+          src={item.src}
+          alt={item.title}
+          width={item.width}
+          height={item.height}
+        />
+        <div className={`text-left ${index % 2 === 0 ? "text-right" : "text-left"}`}>
+          <h3 className="font-semibold text-lg gradient-text">{item.title}</h3>
+          <p className="text-sm text-gray-600 mt-1">{item.desc}</p>
+        </div>
       </div>
-    </div>
-
-    {/* Box 2 */}
-    <div className="flex items-start gap-4 p-6 rounded-2xl bg-gradient-to-r from-[#FFC757] to-[#EB5E55] text-[var(--text-white)]">
-      <Image src="/icons/Verification.svg" alt="Verification" width={60} height={60} />
-      <div>
-        <h3 className="font-semibold text-lg drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">Verification</h3>
-        <p className="text-sm mt-1 drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">
-          Every fact is double-checked by our head researchers to confirm accuracy.
-        </p>
-      </div>
-    </div>
-
-    {/* Box 3 */}
-    <div className="flex items-start gap-4 p-6 rounded-2xl bg-gradient-to-r from-[#FFC757] to-[#EB5E55] text-[var(--text-white)]">
-      <Image src="/icons/Simplified.svg" alt="Simplified" width={60} height={60} />
-      <div>
-        <h3 className="font-semibold text-lg drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">Simplified for You</h3>
-        <p className="text-sm mt-1 drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">
-          We rewrite complex data into clear, easy-to-read summaries without losing accuracy.
-        </p>
-      </div>
-    </div>
-
-    {/* Box 4 */}
-    <div className="flex items-start gap-4 p-6 rounded-2xl bg-gradient-to-r from-[#FFC757] to-[#EB5E55] text-[var(--text-white)]">
-      <Image src="/icons/Citation.svg" alt="Citation" width={60} height={60} />
-      <div>
-        <h3 className="font-semibold text-lg drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">Citation</h3>
-        <p className="text-sm mt-1 drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">
-          Each piece of information comes with a source link so you can check it yourself.
-        </p>
-      </div>
-    </div>
-
-    {/* Box 5 */}
-    <div className="flex items-start gap-4 p-6 rounded-2xl bg-gradient-to-r from-[#FFC757] to-[#EB5E55] text-[var(--text-white)]">
-      <Image src="/icons/Updates.svg" alt="Regular Updates" width={60} height={60} />
-      <div>
-        <h3 className="font-semibold text-lg drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">Regular Updates</h3>
-        <p className="text-sm mt-1 drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">
-          We keep track of changes and update the platform so you’re always looking at the latest information.
-        </p>
-      </div>
-    </div>
+    ))}
   </div>
 </div>
+
+
     </main>
   );
 }

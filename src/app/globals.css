@@ -15,9 +15,9 @@
   --text-white: #FFFCF7
 }
 
-*{
-  font-family: Roboto;
-  background-color: #FFFCF7;
+* {
+  font-family: Roboto, sans-serif;
+  box-sizing: border-box;
 }
 
 body {
@@ -25,4 +25,12 @@ body {
   color: var(--foreground);
 }
 
+/* Reusable Gradient Box */
+.gradient-box {
+  @apply bg-gradient-to-r from-[#FFC757] to-[#EB5E55] text-[var(--text-white)] rounded-2xl p-6;
+}
 
+/* Gradient Text Utility */
+.gradient-text {
+  @apply bg-gradient-to-r from-[#FFC757] to-[#EB5E55] bg-clip-text text-transparent;
+}

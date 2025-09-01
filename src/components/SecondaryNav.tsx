@@ -14,7 +14,7 @@ const navItems = [
 
 export default function SecondaryNav() {
   return (
-    <div className="w-full bg-[#FFFCF7] border-b border-[#e5e5e5]">
+    <div className="w-full bg-[#FFFCF7] ">
       {/* Navigation links */}
       <div className="flex justify-center gap-8 py-3">
         {navItems.map((item) => (
