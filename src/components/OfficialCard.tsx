@@ -8,7 +8,7 @@ interface Official {
   title: string;
   level: string;
   term: string;
-  photo?: string; // New prop for image
+  photo?: string;
 }
 
 interface OfficialCardProps extends Official {
@@ -56,11 +56,12 @@ const OfficialCard: React.FC<OfficialCardProps> = ({ name, title, level, term, o
 );
 
 interface OfficialsPreviewProps {
+  heading?: string; // new heading prop
   officials?: Official[];
   onOfficialClick?: (official: Official) => void;
 }
 
-const OfficialsPreview: React.FC<OfficialsPreviewProps> = ({ officials = [], onOfficialClick = () => {} }) => {
+const OfficialsPreview: React.FC<OfficialsPreviewProps> = ({ heading = "Officials", officials = [], onOfficialClick = () => {} }) => {
   const defaultOfficials: Official[] = [
     {
       id: 1,
@@ -87,7 +88,7 @@ const OfficialsPreview: React.FC<OfficialsPreviewProps> = ({ officials = [], onO
       {/* Header */}
       <div className="mb-6">
         <div className="flex items-center">
-          <h2 className="text-xl font-semibold text-[var(--text)]">Officials</h2>
+          <h2 className="text-xl font-semibold text-[var(--text)]">{heading}</h2>
           <ChevronRight className="w-5 h-5 text-[var(--text-orange)] ml-2" />
         </div>
       </div>
