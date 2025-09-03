@@ -11,12 +11,12 @@ export default function Home() {
 
       {/* Main Headline */}
       <h1 className="mt-6 text-[40px] font-bold text-[var(--foreground)] leading-tight max-w-3xl">
-        Don’t scroll blind. <br /> Take back your power.
+        Don’t scroll blind. <br /> Take back your power!
       </h1>
 
       {/* Subtext */}
       <p className="mt-4 text-[14px] text-gray-400 max-w-md">
-        Your all-in-one tool for government and MIL information.
+        Your all-in-one tool for government and MIL information!
       </p>
     
      {/* Stats Section */}
