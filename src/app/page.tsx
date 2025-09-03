@@ -16,7 +16,7 @@ export default function Home() {
 
       {/* Subtext */}
       <p className="mt-4 text-[14px] text-gray-400 max-w-md">
-        Your all-in-one tool for government and MIL information
+        Your all-in-one tool for government and MIL information.
       </p>
     
      {/* Stats Section */}
