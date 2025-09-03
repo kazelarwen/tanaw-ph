@@ -1,13 +1,13 @@
 import React from 'react';
-import { ChevronRight, HandHeart, FileText, Vote } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
+import Image from 'next/image';
 
 interface Service {
   id: number;
   title: string;
   description: string;
-  icon: React.ComponentType<any>;
+  icon: string; //  now it's a string path to your SVG
   iconBg: string;
-  iconColor: string;
 }
 
 interface ServicesCardProps {
@@ -22,25 +22,22 @@ const ServicesCard: React.FC<ServicesCardProps> = ({
       id: 1,
       title: "Government Help",
       description: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.",
-      icon: HandHeart,
+      icon: "/icons/GovHelp.svg", // svg file
       iconBg: "bg-orange-100",
-      iconColor: "text-orange-600"
     },
     {
       id: 2,
       title: "E-Services",
       description: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.",
-      icon: FileText,
+      icon: "/icons/E-services.svg", // svg file
       iconBg: "bg-red-100",
-      iconColor: "text-red-600"
     },
     {
       id: 3,
       title: "Election Information",
       description: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.",
-      icon: Vote,
+      icon: "/icons/Election.svg", // svg file
       iconBg: "bg-orange-100",
-      iconColor: "text-orange-600"
     }
   ],
   onServiceClick,
@@ -74,33 +71,38 @@ const ServicesCard: React.FC<ServicesCardProps> = ({
 
       {/* Services Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {services.map((service) => {
-          const IconComponent = service.icon;
-          return (
-            <div
-              key={service.id}
-              onClick={() => handleServiceClick(service.id)}
-              className="bg-[var(--background)] border border-gray-200 rounded-lg p-6 cursor-pointer hover:shadow-md transition-all duration-200"
-            >
-              <div className="flex items-start space-x-4">
-                {/* Icon Container */}
-                <div className={`flex-shrink-0 w-12 h-12 ${service.iconBg} rounded-lg flex items-center justify-center`}>
-                  <IconComponent className={`w-6 h-6 ${service.iconColor}`} />
-                </div>
-                
-                {/* Content */}
-                <div className="flex-1 min-w-0">
-                  <h3 className="text-lg font-semibold text-[var(--text)] mb-2">
-                    {service.title}
-                  </h3>
-                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                    {service.description}
-                  </p>
-                </div>
+        {services.map((service) => (
+          <div
+            key={service.id}
+            onClick={() => handleServiceClick(service.id)}
+            className="bg-[var(--background)] border border-gray-200 rounded-lg p-6 cursor-pointer hover:shadow-md transition-all duration-200"
+          >
+            <div className="flex items-start space-x-4">
+              {/* Icon Container */}
+              <div
+                className={`flex-shrink-0 w-12 h-12 ${service.iconBg} rounded-lg flex items-center justify-center`}
+              >
+                <Image
+                  src={service.icon}
+                  alt={service.title}
+                  width={24}
+                  height={24}
+                  className="w-6 h-6"
+                />
+              </div>
+
+              {/* Content */}
+              <div className="flex-1 min-w-0">
+                <h3 className="text-lg font-semibold text-[var(--text)] mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                  {service.description}
+                </p>
               </div>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
     </div>
   );
