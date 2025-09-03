@@ -2,12 +2,11 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function DisclaimerModal() {
   const [isOpen, setIsOpen] = useState(true);
 
-  // Optional: Only show once per session
+  // ✅ Only show once per session
   useEffect(() => {
     const seenDisclaimer = sessionStorage.getItem("seenDisclaimer");
     if (seenDisclaimer) {
@@ -17,7 +16,7 @@ export default function DisclaimerModal() {
 
   const handleClose = () => {
     setIsOpen(false);
-    sessionStorage.setItem("seenDisclaimer", "true"); // Prevent showing again
+    sessionStorage.setItem("seenDisclaimer", "true");
   };
 
   if (!isOpen) return null;
@@ -25,18 +24,10 @@ export default function DisclaimerModal() {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black/20 backdrop-blur-sm z-50">
       <div className="bg-white rounded-2xl shadow-lg max-w-lg w-full mx-4 p-6 relative text-center">
-        {/* Close Button */}
-        <button
-          onClick={handleClose}
-          className="absolute top-4 right-4 text-2xl text-gray-600 hover:text-black"
-        >
-          ×
-        </button>
-
         {/* Illustration */}
         <div className="flex justify-center mb-4">
           <Image
-            src="/icons/disclaimer-bird.svg" // replace with your uploaded image
+            src="/icons/disclaimer-bird.svg"
             alt="Disclaimer"
             width={120}
             height={120}
@@ -44,7 +35,7 @@ export default function DisclaimerModal() {
         </div>
 
         {/* Title */}
-        <h2 className="text-xl font-bold italic mb-4">DISCLAIMER ALERT!</h2>
+        <h2 className="text-xl font-bold mb-4">Under Development</h2>
 
         {/* Message */}
         <p className="text-sm text-gray-700 mb-4">
@@ -55,13 +46,14 @@ export default function DisclaimerModal() {
           This is a submitted project to UNESCO Hackathon.
         </p>
 
-        {/* Suggestion link */}
-        <Link
-          href="/suggestions"
-          className="text-sm font-medium gradient-text hover:underline"
+        {/* Confirm Button */}
+        <button
+            onClick={handleClose}
+            className="gradient-btn text-sm"
         >
-          Leave a suggestion!
-        </Link>
+            I understand
+        </button>
+
       </div>
     </div>
   );

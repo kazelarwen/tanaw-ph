@@ -69,7 +69,7 @@ export default function Home() {
 
             {/* Box 2 */}
             <div className="gradient-box flex items-start gap-4">
-              <Image src="/icons/Verification.svg" alt="Verification" width={60} height={60} />
+              <Image src="/icons/Verification.svg" alt="Verification" width={100} height={100} />
               <div>
                 <h3 className="font-semibold text-lg drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">
                   Verification
