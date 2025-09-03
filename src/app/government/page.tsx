@@ -3,6 +3,7 @@
 import React from 'react';
 import OfficialsPreview from '@/components/OfficialCard'; // make sure path is correct
 import NewsPreview from '@/components/FakeNewsCard'; // import the news component
+import ServicesCard from '@/components/ServicesCard'; // import the services component
 
 interface Official {
   id: number;
@@ -114,6 +115,16 @@ const OfficialsPage: React.FC = () => {
     // Navigate to full news page here
   };
 
+  const handleServiceClick = (serviceId: number) => {
+    console.log('Clicked service:', serviceId);
+    // Navigate to full service page here
+  };
+
+  const handleViewAllServices = () => {
+    console.log('View all services clicked');
+    // Navigate to services page here
+  };
+
   return (
     <div className="min-h-screen bg-[var(--background)]">
       {/* Officials Section */}
@@ -127,6 +138,14 @@ const OfficialsPage: React.FC = () => {
         <NewsPreview
           news={sampleNews}
           onNewsClick={handleNewsClick}
+        />
+      </div>
+
+      {/* Services Section */}
+      <div className="mt-12"> {/* Add spacing between sections */}
+        <ServicesCard
+          onServiceClick={handleServiceClick}
+          onViewAllClick={handleViewAllServices}
         />
       </div>
     </div>
