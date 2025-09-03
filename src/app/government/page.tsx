@@ -31,7 +31,7 @@ const OfficialsPage: React.FC = () => {
       title: "President",
       level: "National",
       term: "2022 - 2028",
-      photo: "/images/emilia.jpg"
+      photo: "/images/manuelito.png"
     },
     {
       id: 2,
@@ -39,7 +39,7 @@ const OfficialsPage: React.FC = () => {
       title: "Vice President",
       level: "National",
       term: "2022 - 2028",
-      photo: "/images/emilia.jpg"
+      photo: "/images/manuelito.png"
     },
     {
       id: 3,
@@ -47,7 +47,7 @@ const OfficialsPage: React.FC = () => {
       title: "Senate President",
       level: "National",
       term: "2022 - 2025",
-      photo: "/images/emilia.jpg"
+      photo: "/images/manuelito.png"
     },
     {
       id: 4,
@@ -55,7 +55,8 @@ const OfficialsPage: React.FC = () => {
       title: "House Speaker",
       level: "National",
       term: "2022 - 2025",
-      photo: "/images/emilia.jpg"
+      photo: "/images/manuelito.png"
+
     },
     {
       id: 5,
@@ -63,7 +64,8 @@ const OfficialsPage: React.FC = () => {
       title: "Chief Justice",
       level: "National",
       term: "2020 - 2026",
-      photo: "/images/emilia.jpg"
+      photo: "/images/manuelito.png"
+
     },
     {
       id: 6,
@@ -71,7 +73,8 @@ const OfficialsPage: React.FC = () => {
       title: "Governor",
       level: "Provincial",
       term: "2022 - 2025",
-      photo: "/images/emilia.jpg"
+      photo: "/images/manuelito.png"
+
     }
   ];
 
