@@ -40,3 +40,4 @@ body {
   @apply bg-gradient-to-r from-[#FFC757] to-[#EB5E55] text-[var(--text-white)] 
     font-medium px-6 py-2 rounded-full shadow-md hover:opacity-90 transition;
 }
+
