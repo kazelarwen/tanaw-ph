@@ -2,6 +2,7 @@
 
 import React from "react";
 import { FaFacebook, FaInstagram, FaTiktok, FaTwitter } from "react-icons/fa";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -24,6 +25,10 @@ const Footer = () => {
         <p className="text-sm text-[#585858]">
           © 2025 TanawPH. All rights reserved.
         </p>
+        <Image src="/icons/milclicks.svg" alt="Tawi" width={70} height={20} />
+      </div>
+
+      <div className="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between">
         <h1 className="font-bold text-lg bg-gradient-to-r from-[#FFC757] to-[#EB5E55] text-transparent bg-clip-text">
           TanawPH
         </h1>

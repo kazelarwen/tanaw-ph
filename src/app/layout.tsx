@@ -6,6 +6,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SecondaryNav from "@/components/SecondaryNav";
+import DisclaimerModal from "@/components/DisclaimerModal"; // 👈 Import
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -22,7 +23,7 @@ export default function RootLayout({
 
   // ✅ Homepage is just "/" not "/Home"
   const secondaryNavRoutes = [
-    "/",            // homepage
+    "/", // homepage
     "/government",
     "/mil",
     "/fact-check",
@@ -31,11 +32,16 @@ export default function RootLayout({
 
   const showSecondaryNav =
     secondaryNavRoutes.includes(pathname) ||
-    secondaryNavRoutes.some((route) => pathname !== "/" && pathname.startsWith(route + "/"));
+    secondaryNavRoutes.some(
+      (route) => pathname !== "/" && pathname.startsWith(route + "/")
+    );
 
   return (
     <html lang="en" className={roboto.variable}>
       <body>
+        {/* Disclaimer Modal appears first */}
+        <DisclaimerModal />
+
         {/* Navbar stays on top */}
         <Navbar />
 
