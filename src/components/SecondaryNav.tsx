@@ -3,8 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FaSearch } from "react-icons/fa";
+import { usePathname } from "next/navigation";
 
-// Replace with your own SVG files placed in /public/icons/
 const navItems = [
   { name: "Government", icon: "/icons/government.svg", href: "/government" },
   { name: "MIL", icon: "/icons/mil.svg", href: "/mil" },
@@ -13,26 +13,37 @@ const navItems = [
 ];
 
 export default function SecondaryNav() {
+  const pathname = usePathname();
+
   return (
     <div className="w-full bg-[#FFFCF7] mt-20">
       {/* Navigation links */}
       <div className="flex justify-center gap-8 py-3">
-        {navItems.map((item) => (
-          <Link
-            key={item.name}
-            href={item.href}
-            className="flex items-center gap-2 text-[#212429] font-medium hover:bg-gradient-to-r hover:from-[#FFC757] hover:to-[#EB5E55] hover:bg-clip-text transition"
-          >
-            <Image
-              src={item.icon}
-              alt={item.name}
-              width={20}
-              height={20}
-              className="w-5 h-5"
-            />
-            <span>{item.name}</span>
-          </Link>
-        ))}
+        {navItems.map((item) => {
+          const isActive = pathname.startsWith(item.href);
+
+          return (
+            <Link
+              key={item.name}
+              href={item.href}
+              className={`flex items-center gap-2 font-medium transition
+                ${
+                  isActive
+                    ? "bg-gradient-to-r from-[#FFC757] to-[#EB5E55] bg-clip-text text-transparent"
+                    : "text-[#212429] hover:bg-gradient-to-r hover:from-[#FFC757] hover:to-[#EB5E55] hover:bg-clip-text hover:text-transparent"
+                }`}
+            >
+              <Image
+                src={item.icon}
+                alt={item.name}
+                width={20}
+                height={20}
+                className="w-5 h-5"
+              />
+              <span>{item.name}</span>
+            </Link>
+          );
+        })}
       </div>
 
       {/* Search bar */}
