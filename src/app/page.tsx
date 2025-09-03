@@ -82,7 +82,7 @@ export default function Home() {
 
             {/* Box 3 */}
             <div className="gradient-box flex items-start gap-4">
-              <Image src="/icons/Simplified.svg" alt="Simplified" width={60} height={60} />
+              <Image src="/icons/Simplified.svg" alt="Simplified" width={100} height={100} />
               <div>
                 <h3 className="font-semibold text-lg drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">
                   Simplified for You
@@ -95,7 +95,7 @@ export default function Home() {
 
             {/* Box 4 */}
             <div className="gradient-box flex items-start gap-4">
-              <Image src="/icons/Citation.svg" alt="Citation" width={60} height={60} />
+              <Image src="/icons/Citation.svg" alt="Citation" width={100} height={100} />
               <div>
                 <h3 className="font-semibold text-lg drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">
                   Citation
@@ -108,7 +108,7 @@ export default function Home() {
 
             {/* Box 5 */}
             <div className="gradient-box flex items-start gap-4">
-              <Image src="/icons/Updates.svg" alt="Regular Updates" width={60} height={60} />
+              <Image src="/icons/Updates.svg" alt="Regular Updates" width={100} height={100} />
               <div>
                 <h3 className="font-semibold text-lg drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">
                   Regular Updates
