@@ -6,7 +6,8 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SecondaryNav from "@/components/SecondaryNav";
-import DisclaimerModal from "@/components/DisclaimerModal"; // 👈 Import
+import DisclaimerModal from "@/components/DisclaimerModal"; 
+import Tawi from "@/components/Tawi"; 
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -59,6 +60,9 @@ export default function RootLayout({
 
         {/* Footer stays at bottom */}
         <Footer />
+
+         {/* 👇 Always floating on all pages */}
+        <Tawi />
       </body>
     </html>
   );
