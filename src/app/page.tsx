@@ -148,36 +148,36 @@ export default function Home() {
         <div className="flex flex-col gap-10">
           {[
             {
-              title: "Officials & Candidates",
-              desc: "Search verified profiles of leaders, parties, and candidates with their background, experience, and advocacies.",
+              title: "Government & Country information",
+              desc: "Verified profiles of public officials, and updates on current national issues and political happenings, all in one trusted space.",
               src: "/icons/Offer1.svg",
               width: 100,
               height: 100,
             },
             {
               title: "MIL Resources",
-              desc: "Access infographics, classroom-ready games, and real cases of digital dangers to learn smarter media habits.",
+              desc: "Ready to share and print infographics, History of digital dangers and play interactive MIL games to help youth spot fake news and understand media better.",
               src: "/icons/Offer2.svg",
               width: 100,
               height: 100,
             },
             {
               title: "Fact Check Tools",
-              desc: "Search verified profiles of leaders, parties, and candidates with their background, experience, and advocacies.",
+              desc: "Easy to digest fact-checks on viral misinformation, plus tools to verify images, videos, and text.",
               src: "/icons/Offer3.svg",
               width: 100,
               height: 100,
             },
             {
               title: "Youth Empowerment",
-              desc: "Access infographics, classroom-ready games, and real cases of digital dangers to learn smarter media habits.",
+              desc: "A safe discussion space where youth share thoughts and experiences. And a process to make their voice heard, recognized, and supported.",
               src: "/icons/Offer4.svg",
               width: 100,
               height: 100,
             },
             {
-              title: "Tawi Assistant",
-              desc: "Search verified profiles of leaders, parties, and candidates with their background, experience, and advocacies.",
+              title: "Tawi",
+              desc: "An AI assistant that helps you navigate the platform, read content aloud, customize your experience, and a bot you can to talk to for help in MIL.",
               src: "/icons/Offer5.svg",
               width: 150,
               height: 100,
