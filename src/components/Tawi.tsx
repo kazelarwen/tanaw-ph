@@ -35,7 +35,7 @@ export default function TawiAssistant() {
         onClick={() => setOpen(!open)}
         className="w-14 h-14 rounded-full bg-gradient-to-r from-[#FFC757] to-[#EB5E55] shadow-lg flex items-center justify-center text-white hover:scale-105 transition"
       >
-        <Image src="/icons/tawi-icon.svg" alt="Tawi-icon" width={35} height={20} />   
+        <Image src="/icons/tawiicon.svg" alt="Tawi-icon" width={35} height={20} />   
       </button>
       <span className="absolute -top-1 -right-1 bg-white text-xs font-bold text-[#EB5E55] rounded-full px-1.5 py-0.5 shadow">
             <Image src="/icons/aistar-icon.svg" alt="Bot" width={15} height={15} />
