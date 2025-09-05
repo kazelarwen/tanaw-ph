@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Type, Volume2, Globe, Moon, Bot } from "lucide-react";
 import Image from "next/image";
 
 export default function TawiAssistant() {
@@ -33,12 +32,27 @@ export default function TawiAssistant() {
       {/* Floating Button */}
       <button
         onClick={() => setOpen(!open)}
-        className="w-14 h-14 rounded-full bg-gradient-to-r from-[#FFC757] to-[#EB5E55] shadow-lg flex items-center justify-center text-white hover:scale-105 transition"
+        className={`relative w-14 h-14 rounded-full bg-gradient-to-r from-[#FFC757] to-[#EB5E55] shadow-lg flex items-center justify-center text-white transition-transform
+        before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-r before:from-[#FFC757] before:to-[#EB5E55] before:blur-lg before:transition
+        animate-tilt
+        ${open ? "scale-110 before:opacity-70" : "hover:scale-110 before:opacity-0 hover:before:opacity-70"}`}
       >
-        <Image src="/icons/tawiicon.svg" alt="Tawi-icon" width={35} height={20} />   
+        <Image
+          src="/icons/tawiicon.svg"
+          alt="Tawi_icon"
+          width={35}
+          height={20}
+          className="relative z-10"
+        />
       </button>
+
       <span className="absolute -top-1 -right-1 bg-white text-xs font-bold text-[#EB5E55] rounded-full px-1.5 py-0.5 shadow">
-            <Image src="/icons/aistar-icon.svg" alt="Bot" width={15} height={15} />
+        <Image
+          src="/icons/tawi.svg"
+          alt="Bot"
+          width={28}
+          height={28}
+        />
       </span>
     </div>
   );
