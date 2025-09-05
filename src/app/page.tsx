@@ -11,12 +11,12 @@ export default function Home() {
 
       {/* Main Headline */}
       <h1 className="mt-6 text-[40px] font-bold text-[var(--foreground)] leading-tight max-w-3xl">
-        Don’t scroll blind. <br /> Take back your power!
+        Don’t scroll blind <br /> Take back your power.
       </h1>
 
       {/* Subtext */}
       <p className="mt-4 text-[14px] text-gray-400 max-w-md">
-        Your all-in-one tool for government and MIL information!
+        Your all-in-one tool for government and MIL information
       </p>
     
      {/* Stats Section */}
@@ -47,7 +47,98 @@ export default function Home() {
         </div>
       </div>
 
-        {/* How We Keep It 100% Verified Section */}
+      {/* About 
+      
+      <div className="mt-20 w-full max-w-3xl text-center">
+         Heading 
+        <h2 className="mt-6 text-[40px] font-bold leading-tight">
+          <span className="text-[var(--foreground)]">About </span>
+          <span className="gradient-text">TanawPH</span>
+        </h2>
+
+        Paragraph
+        <p className="mt-6 text-[16px] text-gray-500">
+          <span className="gradient-text font-semibold">TanawPH</span> is a youth-led platform that helps Filipinos stay
+          informed and safe online. We provide verified civic information, tools, and
+          resources that strengthen Media and Information Literacy (MIL) to fight
+          misinformation and digital dangers.
+        </p>
+      </div>
+      */}
+      {/* What We Offer */}
+      <div className="mt-20 w-full max-w-5xl">
+        {/* Heading 
+        <h2 className="text-[32px] font-bold text-[var(--foreground)] text-center mb-12">
+          What we offer
+        </h2>
+        */}
+       <div className="flex flex-col gap-16">
+        {[
+          {
+            title: "Government & Country information",
+            desc: "Verified profiles of public officials, and updates on current national issues and political happenings, all in one trusted space.",
+            src: "/icons/Offer1.svg",
+          },
+          {
+            title: "MIL Resources",
+            desc: "Ready to share and print infographics, History of digital dangers and play interactive MIL games to help youth spot fake news and understand media better online and offline.",
+            src: "/icons/Offer2.svg",
+          },
+          {
+            title: "Fact Check Tools",
+            desc: "Easy to digest fact-checks on viral misinformation, plus tools to verify images, videos, and text.",
+            src: "/icons/Offer3.svg",
+          },
+          {
+            title: "Youth Empowerment",
+            desc: "A safe discussion space where youth share thoughts and experiences. And a process to make their voice heard, recognized, and supported.",
+            src: "/icons/Offer4.svg",
+          },
+          {
+            title: "Tawi",
+            desc: "An AI assistant that helps you navigate the platform, read content aloud, customize your experience, and a bot you can to talk to for help in MIL.",
+            src: "/icons/Offer5.svg",
+          },
+        ].map((item, index) => {
+          const isEven = index % 2 === 0;
+          return (
+            <div
+              key={index}
+              className={`flex flex-col items-center text-center gap-6 
+              md:flex-row md:items-center md:gap-12 
+              ${isEven ? "md:flex-row" : "md:flex-row-reverse"}`}
+            >
+
+            {/* Text Section */}
+            <div
+              className={`max-w-xl 
+                ${isEven ? "md:text-left" : "md:text-right"} text-center md:text-inherit`}
+            >
+              <h3 className="font-semibold text-2xl md:text-3xl gradient-text leading-snug">
+                {item.title}
+              </h3>
+              <p className="text-lg md:text-xl text-gray-600 mt-4 leading-relaxed">
+                {item.desc}
+              </p>
+            </div>
+
+            {/* Image Section */}
+            <div className="flex-shrink-0">
+              <Image
+                src={item.src}
+                alt={item.title}
+                width={300}
+                height={300}
+                className="w-40 h-40 md:w-80 md:h-80"
+              />
+            </div>
+          </div>
+          );
+        })}
+      </div>
+      </div>
+
+      {/* How We Keep It 100% Verified Section */}
         <div className="mt-20 w-full max-w-5xl text-left">
           <h2 className="text-[32px] font-bold text-[var(--foreground)] text-center mb-12">
             How We Keep It <br /> 100% Verified
@@ -120,89 +211,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-      {/* About */}
-      <div className="mt-20 w-full max-w-3xl text-center">
-        {/* Heading */}
-        <h2 className="mt-6 text-[40px] font-bold leading-tight">
-          <span className="text-[var(--foreground)]">About </span>
-          <span className="gradient-text">TanawPH</span>
-        </h2>
-
-        {/* Paragraph */}
-        <p className="mt-6 text-[16px] text-gray-500">
-          <span className="gradient-text font-semibold">TanawPH</span> is a youth-led platform that helps Filipinos stay
-          informed and safe online. We provide verified civic information, tools, and
-          resources that strengthen Media and Information Literacy (MIL) to fight
-          misinformation and digital dangers.
-        </p>
-      </div>
-
-      {/* What We Offer */}
-      <div className="mt-20 w-full max-w-5xl">
-        {/* Heading */}
-        <h2 className="text-[32px] font-bold text-[var(--foreground)] text-center mb-12">
-          What we offer
-        </h2>
-
-        <div className="flex flex-col gap-10">
-          {[
-            {
-              title: "Government & Country information",
-              desc: "Verified profiles of public officials, and updates on current national issues and political happenings, all in one trusted space.",
-              src: "/icons/Offer1.svg",
-              width: 100,
-              height: 100,
-            },
-            {
-              title: "MIL Resources",
-              desc: "Ready to share and print infographics, History of digital dangers and play interactive MIL games to help youth spot fake news and understand media better.",
-              src: "/icons/Offer2.svg",
-              width: 100,
-              height: 100,
-            },
-            {
-              title: "Fact Check Tools",
-              desc: "Easy to digest fact-checks on viral misinformation, plus tools to verify images, videos, and text.",
-              src: "/icons/Offer3.svg",
-              width: 100,
-              height: 100,
-            },
-            {
-              title: "Youth Empowerment",
-              desc: "A safe discussion space where youth share thoughts and experiences. And a process to make their voice heard, recognized, and supported.",
-              src: "/icons/Offer4.svg",
-              width: 100,
-              height: 100,
-            },
-            {
-              title: "Tawi",
-              desc: "An AI assistant that helps you navigate the platform, read content aloud, customize your experience, and a bot you can to talk to for help in MIL.",
-              src: "/icons/Offer5.svg",
-              width: 150,
-              height: 100,
-            },
-          ].map((item, index) => (
-            <div
-              key={index}
-              className={`flex items-start gap-4 ${
-                index % 2 === 0 ? "flex-row-reverse" : "flex-row"
-              }`}
-            >
-              <Image
-                src={item.src}
-                alt={item.title}
-                width={item.width}
-                height={item.height}
-              />
-              <div className={`text-left ${index % 2 === 0 ? "text-right" : "text-left"}`}>
-                <h3 className="font-semibold text-lg gradient-text">{item.title}</h3>
-                <p className="text-sm text-gray-600 mt-1">{item.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
 
       {/* Volunteer Section */}
       <div className="mt-32 w-full max-w-5xl mx-auto px-4 text-center">
